@@ -1,6 +1,6 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
-import 'package:bookly/presentions/views/home_view.dart';
+import 'package:bookly/Features/home/presention/views/home_view.dart';
 import 'package:bookly/presentions/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
