@@ -26,6 +26,39 @@ class HomeViewBody extends StatelessWidget {
             'Best Seller',
             style: Styles.titleMedium,
           ),
+          BestSellerListViewItem()
+        ],
+      ),
+    );
+  }
+}
+
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 125,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.5 / 4,
+            child: Container(
+              width: 100,
+              height: MediaQuery.of(context).size.height * .25,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                image: const DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(AssetsData.testImage),
+                ),
+              ),
+            ),
+          ),
+          Column(
+            children: [],
+          )
         ],
       ),
     );
