@@ -6,16 +6,16 @@ class IndustryIdentifier extends Equatable {
 
   const IndustryIdentifier({this.type, this.identifier});
 
-  factory IndustryIdentifier.fromNo(Map<String, dynamic> json) {
+  factory IndustryIdentifier.fromJson(Map<String, dynamic> json) {
     return IndustryIdentifier(
-      type: json['type']?.toString(),
-      identifier: json['identifier']?.toString(),
+      type: json['type'] as String?,
+      identifier: json['identifier'] as String?,
     );
   }
 
-  Map<String, dynamic> toNo() => {
-        if (type != null) 'type': type,
-        if (identifier != null) 'identifier': identifier,
+  Map<String, dynamic> toJson() => {
+        'type': type,
+        'identifier': identifier,
       };
 
   @override

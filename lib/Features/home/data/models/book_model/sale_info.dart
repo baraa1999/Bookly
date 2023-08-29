@@ -7,16 +7,16 @@ class SaleInfo extends Equatable {
 
   const SaleInfo({this.country, this.saleability, this.isEbook});
 
-  factory SaleInfo.fromNo(Map<String, dynamic> json) => SaleInfo(
-        country: json['country']?.toString(),
-        saleability: json['saleability']?.toString(),
-        isEbook: json['isEbook']?.toString().contains("true"),
+  factory SaleInfo.fromJson(Map<String, dynamic> json) => SaleInfo(
+        country: json['country'] as String?,
+        saleability: json['saleability'] as String?,
+        isEbook: json['isEbook'] as bool?,
       );
 
-  Map<String, dynamic> toNo() => {
-        if (country != null) 'country': country,
-        if (saleability != null) 'saleability': saleability,
-        if (isEbook != null) 'isEbook': isEbook,
+  Map<String, dynamic> toJson() => {
+        'country': country,
+        'saleability': saleability,
+        'isEbook': isEbook,
       };
 
   @override

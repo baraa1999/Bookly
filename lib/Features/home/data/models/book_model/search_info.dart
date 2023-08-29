@@ -5,12 +5,12 @@ class SearchInfo extends Equatable {
 
   const SearchInfo({this.textSnippet});
 
-  factory SearchInfo.fromNo(Map<String, dynamic> json) => SearchInfo(
-        textSnippet: json['textSnippet']?.toString(),
+  factory SearchInfo.fromJson(Map<String, dynamic> json) => SearchInfo(
+        textSnippet: json['textSnippet'] as String?,
       );
 
-  Map<String, dynamic> toNo() => {
-        if (textSnippet != null) 'textSnippet': textSnippet,
+  Map<String, dynamic> toJson() => {
+        'textSnippet': textSnippet,
       };
 
   @override

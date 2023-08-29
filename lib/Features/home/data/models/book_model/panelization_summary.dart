@@ -9,20 +9,16 @@ class PanelizationSummary extends Equatable {
     this.containsImageBubbles,
   });
 
-  factory PanelizationSummary.fromNo(Map<String, dynamic> json) {
+  factory PanelizationSummary.fromJson(Map<String, dynamic> json) {
     return PanelizationSummary(
-      containsEpubBubbles:
-          json['containsEpubBubbles']?.toString().contains("true"),
-      containsImageBubbles:
-          json['containsImageBubbles']?.toString().contains("true"),
+      containsEpubBubbles: json['containsEpubBubbles'] as bool?,
+      containsImageBubbles: json['containsImageBubbles'] as bool?,
     );
   }
 
-  Map<String, dynamic> toNo() => {
-        if (containsEpubBubbles != null)
-          'containsEpubBubbles': containsEpubBubbles,
-        if (containsImageBubbles != null)
-          'containsImageBubbles': containsImageBubbles,
+  Map<String, dynamic> toJson() => {
+        'containsEpubBubbles': containsEpubBubbles,
+        'containsImageBubbles': containsImageBubbles,
       };
 
   @override
