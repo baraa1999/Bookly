@@ -2,9 +2,7 @@ import 'package:bookly/Features/home/presention/manger/featured_books_cubit/feat
 import 'package:bookly/core/widget/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/widget/custom_error_widget.dart';
 import 'custom_book_item.dart';
 
